@@ -1,0 +1,33 @@
+body {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Занимает всю высоту экрана */
+    background-color: #f0f0f0; /* Светло-серый фон */
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    background-color: #ffffff; /* Белый фон для блока */
+    padding: 30px 40px;
+    border-radius: 10px; /* Скругленные углы */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Небольшая тень */
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#datetime p {
+    font-size: 1.2em; /* Немного увеличить шрифт */
+    color: #555;
+    margin: 10px 0;
+}
+
+#datetime span {
+    font-weight: bold;
+    color: #0056b3; /* Синий цвет для даты/времени */
+}
