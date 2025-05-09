@@ -2,21 +2,25 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"> <!-- Добавил user-scalable=no для предотвращения масштабирования жестами -->
     <title>Кастомный Brick Breaker</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Jeorge Breaker</h1>
+    <h1>Brick Breaker</h1> <!-- Укоротил заголовок для мобильных -->
 
-    <div class="controls">
-        <button id="startGameButton" disabled>Загрузка изображений...</button>
+    <div class="game-container"> <!-- Контейнер для холста -->
+        <canvas id="gameCanvas"></canvas> <!-- Размеры убраны, будут заданы в JS -->
     </div>
 
-    <canvas id="gameCanvas" width="480" height="320"></canvas>
+    <div class="controls">
+        <button id="startGameButton" disabled>Загрузка...</button>
+        <!-- Можно добавить кнопку перезапуска, если нужно -->
+        <!-- <button id="restartButton" style="display:none;">Перезапустить</button> -->
+    </div>
 
     <div class="instructions">
-        <p>Управление платформой: Мышь</p>
+        <p>Управление: Мышь или касание</p>
         <p>Цель: разбить все кирпичи.</p>
     </div>
 
