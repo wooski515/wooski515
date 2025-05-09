@@ -1,33 +1,53 @@
 body {
-    font-family: sans-serif;
+    font-family: Arial, sans-serif;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    min-height: 100vh; /* Занимает всю высоту экрана */
-    background-color: #f0f0f0; /* Светло-серый фон */
-    margin: 0;
+    background-color: #f0f0f0;
+    margin-top: 20px;
 }
 
-.container {
-    text-align: center;
-    background-color: #ffffff; /* Белый фон для блока */
-    padding: 30px 40px;
-    border-radius: 10px; /* Скругленные углы */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Небольшая тень */
+canvas {
+    border: 1px solid #333;
+    background-color: #eee;
+    display: block; /* Убирает лишний отступ снизу */
+    margin-top: 20px;
 }
 
-h1 {
-    color: #333;
+.controls {
     margin-bottom: 20px;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-#datetime p {
-    font-size: 1.2em; /* Немного увеличить шрифт */
+.controls div {
+    margin-bottom: 10px;
+}
+
+.controls label {
+    margin-right: 10px;
+}
+
+#startGameButton {
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+#startGameButton:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.instructions {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 0.9em;
     color: #555;
-    margin: 10px 0;
-}
-
-#datetime span {
-    font-weight: bold;
-    color: #0056b3; /* Синий цвет для даты/времени */
 }

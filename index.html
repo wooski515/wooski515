@@ -3,19 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Час у Києві</title>
-    <link rel="stylesheet" href="style.css"> <!-- Подключаем стили -->
+    <title>Кастомный Brick Breaker</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <h1>Jeorge Breaker</h1>
 
-    <div class="container">
-        <h1>Поточний час і дата в Києві</h1>
-        <div id="datetime">
-            <p>Дата: <span id="kyiv-date">Завантаження...</span></p>
-            <p>Час: <span id="kyiv-time">Завантаження...</span></p>
-        </div>
+    <div class="controls">
+        <button id="startGameButton" disabled>Загрузка изображений...</button>
     </div>
 
-    <script src="script.js"></script> <!-- Подключаем скрипт -->
+    <canvas id="gameCanvas" width="480" height="320"></canvas>
+
+    <div class="instructions">
+        <p>Управление платформой: Мышь</p>
+        <p>Цель: разбить все кирпичи.</p>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
