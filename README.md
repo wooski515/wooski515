@@ -10,5 +10,5 @@ https://wooski515.github.io/wooski515
 - 💬 Ask me about ...
 - 📫 How to reach me: ...
 - 😄 Pronouns: They/them
-- ⚡ Fun fact: I`m Furry
+- ⚡ Fun fact: I'm Furry
 
