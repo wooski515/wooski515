@@ -2,26 +2,64 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"> <!-- Добавил user-scalable=no для предотвращения масштабирования жестами -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>Кастомный Brick Breaker</title>
     <link rel="stylesheet" href="style.css">
+    
+    <!-- НОВАЯ СТРОКА: Иконка сайта (favicon) -->
+    <link rel="icon" type="image/png" href="favicon.png">
+
 </head>
 <body>
-    <h1>Brick Breaker</h1> <!-- Укоротил заголовок для мобильных -->
+    <h1>Brick Breaker</h1>
 
-    <div class="game-container"> <!-- Контейнер для холста -->
-        <canvas id="gameCanvas"></canvas> <!-- Размеры убраны, будут заданы в JS -->
+    <div class="game-container">
+        <canvas id="gameCanvas"></canvas>
+        <div id="victoryVideoContainer" class="victory-video-container">
+            <video id="victoryVideo" src="pobeda.mp4" muted controls playsinline></video>
+        </div>
     </div>
 
     <div class="controls">
         <button id="startGameButton" disabled>Загрузка...</button>
-        <!-- Можно добавить кнопку перезапуска, если нужно -->
-        <!-- <button id="restartButton" style="display:none;">Перезапустить</button> -->
+        <button id="leaderboardButton">Таблица лидеров</button>
     </div>
 
     <div class="instructions">
         <p>Управление: Мышь или касание</p>
         <p>Цель: разбить все кирпичи.</p>
+    </div>
+
+    <!-- Аудиофайлы -->
+    <audio id="explosionSound" preload="auto">
+        <source src="vzryv.wav" type="audio/wav">
+    </audio>
+    <audio id="victorySound" preload="auto">
+        <source src="pobeda.wav" type="audio/wav">
+    </audio>
+    <audio id="defeatSound" preload="auto">
+        <source src="porazhenie.wav" type="audio/wav">
+    </audio>
+    <audio id="victoryMusic" preload="auto" loop>
+        <source src="victory-music.mp3" type="audio/mpeg">
+    </audio>
+    
+    <!-- Модальные окна -->
+    <div id="leaderboardModal" class="modal">
+        <div class="modal-content">
+            <span id="closeLeaderboard" class="close-button">&times;</span>
+            <h2>Таблица Лидеров</h2>
+            <ol id="leaderboardList"></ol>
+        </div>
+    </div>
+    <div id="nicknamePrompt" class="modal">
+        <div class="modal-content">
+            <h2 id="promptTitle">Игра окончена!</h2>
+            <p>Ваш счет: <span id="finalScore">0</span></p>
+            <p>Введите ваш никнейм:</p>
+            <input type="text" id="nicknameInput" maxlength="10" placeholder="Игрок 1">
+            <button id="submitScoreButton">Сохранить</button>
+        </div>
     </div>
 
     <script src="script.js"></script>
