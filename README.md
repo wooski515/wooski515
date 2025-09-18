@@ -1,9 +1,7 @@
 ## Hi there 👋
 https://wooski515.github.io/wooski515
 
-**wooski515/wooski515** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-
-Here are some ideas to get you started:
+**wooski515/wooski515** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on my GitHub profile.
 
 - 🔭 I’m currently working on George Droid Brick Breaker
 - 🌱 I’m currently learning ...
